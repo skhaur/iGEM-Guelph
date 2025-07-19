@@ -4,6 +4,12 @@
     padding: 0;
     box-sizing: border-box;
   }
+  html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
   
   body {
     font-family: 'Roboto', Arial, sans-serif;
@@ -110,7 +116,7 @@
   
   /* Tagline and intro paragraph */
   .hero-tagline {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #8d1e1e;
     text-transform: uppercase;
@@ -135,6 +141,164 @@
     object-fit: cover; /* ensures uniform cropping */
     border-radius: 12px;
   }
+
+/*CAROSELLLLLLL*/
+
+.scroll-carousel {
+    background-color: #000;
+    overflow: hidden;
+    width: 100vw;
+    padding: 2rem 0;
+    margin-top: 5rem;
+  
+    /* This centers the section by resetting margin */
+    margin-left: calc(-50vw + 50%);
+  }
+  
+  .carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 0;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+  
+  .carousel-img {
+    height: 300px; 
+    width: 480px;  
+    object-fit: cover;
+    flex-shrink: 0;
+
+  }
+  
+  
+  /* Arrows */
+  .carousel-btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  .carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .carousel-btn.left {
+    left: 1rem;
+  }
+  .carousel-btn.right {
+    right: 1rem;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Mobile override: pause animation and enable arrows */
+  @media (max-width: 768px) {
+    .carousel-btn {
+      display: none; /* hide arrows again on mobile since they're not usable */
+    }
+  
+    .scroll-carousel {
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+  
+    .carousel-img {
+      width: 90vw;
+      height: auto;
+      max-height: 250px;
+      border-radius: 10px;
+    }
+  
+    .carousel-track {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .carousel-img {
+      scroll-snap-align: start;
+      margin-right: 1rem;
+    }
+  }
+  
+  
+  .igem-sections {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .igem-box {
+    flex: 1 1 450px;
+    background-color: white;
+    border: 2px solid #3e3e3e46;
+    border-radius: 9px;
+    padding: 2rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    
+  }
+  
+  .igem-box h2 {
+    font-size: 1.8rem;
+    color: #8d1e1e;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .igem-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .igem-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  background-color: #8d1e1e; /* Red (Guelph Red) */
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.igem-button:hover {
+  background-color: #ba2c2c;
+}
+
   
   
   /* Footer */
