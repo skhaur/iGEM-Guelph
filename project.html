@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iGEM Guelph</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<header>
+    <nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html">
+            <img src="assets/images/shortenedlogo.jpeg" alt="iGEM Guelph logo" class="nav-logo" />
+        </a>
+        </div>
+          
+      
+      <ul class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="involvement.html">Get Involved</a></li>
+        <li class="social">
+          <a href="https://www.instagram.com/igemguelph" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@igemguelph" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://twitter.com/igemguelph" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        </li>
+      </ul>
+      
+  
+      <div class="burger">&#9776;</div> <!-- burger icon -->
+
+      
+    </nav>
+  </header>
+  <body>
+
+      <!-- About Title -->
+  <section class="about-hero">
+    <h1>Previous Projects</h1>
+  </section>
+
+
+  <section class="project-section">
+    <div class="project-content">
+      <div class="project-logo">
+        <a href="https://2024.igem.wiki/guelph/" target="_blank">
+          <img src="assets/images/2024logo.png" alt="2024 Logo" />
+        </a>
+      </div>
+      <div class="project-text">
+        <h3>2024 – Ash Guard</h3>
+        <p>Description for the 2024 project. Add a short summary of what the team did here. With an emphasis on conservation and accessible science,
+            iGEM Guelph has designed a bioinsecticide to fight against the invasive
+            Emerald Ash Borer species.</p>
+      </div>
+    </div>
+  
+    <div class="project-content reverse">
+      <div class="project-logo">
+        <a href="https://2023.igem.wiki/guelph/" target="_blank">
+          <img src="assets/images/2023logo.png" alt="2023 Logo" />
+        </a>
+      </div>
+      <div class="project-text">
+        <h3>2023 – BloomBiota </h3>
+        <p>Engineered a bioremediation solution using genetically modified bacteria to target soil contamination. With an emphasis on conservation and accessible science,
+            iGEM Guelph has designed a bioinsecticide to fight against the invasive
+            Emerald Ash Borer species.</p>
+      </div>
+    </div>
+  
+    <div class="project-content">
+      <div class="project-logo">
+        <a href="https://2022.igem.wiki/guelph/" target="_blank">
+          <img src="assets/images/2022logo.png" alt="2022 Logo" />
+        </a>
+      </div>
+      <div class="project-text">
+        <h3>2022 – Project Ceres</h3>
+        <p>Improving gut health with engineered probiotics. Emphasized accessibility and ethics. With an emphasis on conservation and accessible science,
+            iGEM Guelph has designed a bioinsecticide to fight against the invasive
+            Emerald Ash Borer species.</p>
+      </div>
+    </div>
+  
+    <div class="project-content reverse">
+      <div class="project-logo">
+        <a href="https://2021.igem.org/Team:Guelph" target="_blank">
+          <img src="assets/images/2021logo.png" alt="2021 Logo" />
+        </a>
+      </div>
+      <div class="project-text">
+        <h3>2021 – SynBio Sanitizer</h3>
+        <p>Synthetic biology-powered hand sanitizer project, focused on AMR during COVID-19. With an emphasis on conservation and accessible science,
+            iGEM Guelph has designed a bioinsecticide to fight against the invasive
+            Emerald Ash Borer species.</p>
+      </div>
+    </div>
+
+    <div class="project-content reverse">
+
+        <div class="project-text">
+          <h3>Other Initiatives</h3>
+          <p>Elementary outreach With an emphasis on conservation and accessible science,
+            iGEM Guelph has designed a bioinsecticide to fight against the invasive
+            Emerald Ash Borer species. With an emphasis on conservation and accessible science,
+            iGEM Guelph has designed a bioinsecticide to fight against the invasive
+            Emerald Ash Borer species. With an emphasis on conservation and accessible science,
+            iGEM Guelph has designed a bioinsecticide to fight against the invasive
+            Emerald Ash Borer species.</p>
+        </div>
+      </div>
+  </section>
+
+  
+      
+
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 iGEM Guelph. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  
+  
+    </body>
+
+    <script>
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+      
+          document.querySelectorAll('.parallax-item').forEach((item, index) => {
+            const speed = 0.3 + index * 0.1;
+            item.style.transform = `translate(-50%, ${-scrollY * speed}px)`;
+          });
+        });
+      </script>

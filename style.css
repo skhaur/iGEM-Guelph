@@ -9,6 +9,13 @@
     margin: 0;
     overflow-x: hidden;
   }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+  }
+  
   
   
   body {
@@ -415,5 +422,326 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
+  }
+  
+
+
+
+/*ABOUT PAGE*/
+
+/* About Page Styles */
+
+.about-hero h1 {
+    padding: 4rem 2rem 1rem;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 2rem; /* match .about-section h2 */
+    font-weight: 800;
+    color: black;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    background-color: #ffffff;
+  }
+  
+  .about-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+
+  }
+  
+  .about-section h2 {
+    font-size: 2rem; /* same as h1 */
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #8D1E1E;
+    text-transform: none;
+
+  }
+  
+
+  .parallax-divider {
+    position: relative;
+    height: 60vh;
+    background-image: url('assets/images/team.jpg'); /* swap with your actual path */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+/* Parallax Stats Section */
+.parallax-stats {
+    background-image: url('assets/images/parallax-bg.jpg'); /* replace with desired background image or keep solid */
+    background-color: #000000; /* fallback Guelph red */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 3rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .stats-overlay {
+    background-color: rgba(0, 0, 0, 0.95); /* Guelph red overlay with opacity */
+    padding: 4rem 2rem;
+    width: 100%;
+  }
+
+  
+  
+  .stat-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .stat {
+    flex: 1 1 200px;
+    text-align: center;
+  }
+  
+  .stat h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat p {
+    font-size: 1.2rem;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 60px;
+    background-color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .stat-box {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .divider {
+      display: none;
+    }
+  }
+  
+  
+  
+
+  .team-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    text-transform: none;
+  }
+  
+  .team-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    text-transform: none;
+  }
+  
+  .team-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .team-text h2 {
+    font-size: 2.2rem;
+    color: #8d1e1e;
+    margin-bottom: 1rem;
+  }
+  
+  .team-subheadings h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .team-subheadings p {
+    margin-bottom: 1rem;
+  }
+  
+  .toggle-names summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #8d1e1e;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .toggle-names ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    list-style-type: disc;
+  }
+  
+  .team-description {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #222;
+    line-height: 1.7;
+  }
+  
+
+
+  /*project pageeee*/
+  .project-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+  
+  .project-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
+  }
+  
+  .project-content.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .project-logo img {
+    width: 240px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  
+  .project-text {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .project-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #8d1e1e;
+  }
+  
+  .project-text p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .project-content,
+    .project-content.reverse {
+      flex-direction: column;
+    }
+  
+    .project-text {
+      padding: 1.5rem;
+    }
+  
+    .project-logo img {
+      width: 180px;
+    }
+  }
+  /*Majors , members, years established (7)*/
+
+
+
+  /* GET INVOLVED PAGE*/
+
+  .get-involved-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+  }
+  
+  .get-involved-section h1 {
+    font-size: 2.5rem;
+    color: #8d1e1e;
+    margin-bottom: 1rem;
+  }
+  
+  .get-involved-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    background-color: #8d1e1e;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #aa2e2e;
+  }
+  
+  .recruitment-box {
+    padding: 2rem;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .recruitment-box h2 {
+    color: #8d1e1e;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .recruitment-box p {
+    font-size: 1.1rem;
+    color: #333;
   }
   

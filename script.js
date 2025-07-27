@@ -35,3 +35,5 @@ leftBtn.addEventListener('click', () => {
     updateCarousel();
   }
 });
+
+
