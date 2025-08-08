@@ -75,6 +75,30 @@
   .nav-links .social i:hover {
     opacity: 0.6;
   }
+
+  .nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: black; /* or your navbar text color */
+    padding: 4px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #D62828; /* Use Guelph red or whatever you want */
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
   
   /* Hero section */
   .hero {
