@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iGEM Guelph</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<header>
+    <nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html">
+            <img src="assets/images/shortenedlogo.jpeg" alt="iGEM Guelph logo" class="nav-logo" />
+        </a>
+        </div>
+          
+      
+      <ul class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="involvement.html">Get Involved</a></li>
+        <li><a href="recruitment.html">Recruitment</a></li>
+        <li class="social">
+          <a href="https://www.instagram.com/igemguelph" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@igemguelph" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://twitter.com/igemguelph" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        </li>
+      </ul>
+      
+  
+      <div class="burger">&#9776;</div> <!-- burger icon -->
+
+      
+    </nav>
+  </header>
+  <body>
+
+      <!-- About Title -->
+  <section class="about-hero">
+    <h1>Recruitment</h1>
+    <p>Join our team for the upcoming season! Click the links on the titles to apply.</p>
+  </section>
+
+  <section class="recruitment-section">
+    <div class="project-content">
+        <div class="project-text">
+            <h3><u><a href="https://www.igem.org">Software Member</a></u></h3>
+            <p>Join our software team to help develop tools and applications for our synthetic biology projects.</p>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-text">
+            <h3><u><a href="https://www.igem.org">Software Member</a></u></h3>
+            <p>Join our software team to help develop tools and applications for our synthetic biology projectsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-text">
+            <h3><u><a href="https://www.igem.org">Software Member</a></u></h3>
+            <p>Join our software team to help develop tools and applications for our synthetic biology projects.</p>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <div class="project-text">
+            <h3><u><a href="https://www.igem.org">Software Member</a></u></h3>
+            <p>Join our software team to help develop tools and applications for our synthetic biology projects.</p>
+        </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 iGEM Guelph. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  
+  
+    </body>
+
+    <script>
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+      
+          document.querySelectorAll('.parallax-item').forEach((item, index) => {
+            const speed = 0.3 + index * 0.1;
+            item.style.transform = `translate(-50%, ${-scrollY * speed}px)`;
+          });
+        });
+      </script>

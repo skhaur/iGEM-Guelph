@@ -99,7 +99,11 @@
     width: 100%;
   }
   
-  
+  /* remove styling from a tags */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   /* Hero section */
   .hero {
     padding: 4rem 2rem;
@@ -468,6 +472,15 @@
     background-color: #ffffff;
   }
   
+.about-hero p {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    color: #555;
+    background-color: #ffffff;
+  }
+
   .about-section {
     padding: 2rem;
     max-width: 1200px;
@@ -767,5 +780,14 @@
   .recruitment-box p {
     font-size: 1.1rem;
     color: #333;
+  }
+
+  .recruitment-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 0.5rem;
   }
   
