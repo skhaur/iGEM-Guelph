@@ -471,6 +471,19 @@
     margin-bottom: 0.5rem;
     background-color: #ffffff;
   }
+
+.about-hero h2 {
+    padding: 4rem 2rem 1rem;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: black;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    background-color: #ffffff;
+  }
   
 .about-hero p {
     max-width: 1200px;
@@ -785,9 +798,8 @@
   .recruitment-section {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 5rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    gap: 0.5rem;
+    gap: 2rem;
   }
   
