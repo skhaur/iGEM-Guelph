@@ -311,7 +311,7 @@
   }
   
   .igem-box p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
   }
@@ -803,3 +803,243 @@
     gap: 2rem;
   }
   
+
+  /* HOMEPAGE HERO GALLERY (safe: only affects new classes) */
+.hero-gallery{
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Big hero image */
+.hero-gallery-main{
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 55vh, 520px);
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-gallery-main img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.03);
+}
+
+/* subtle overlay so text below feels connected + cinematic */
+.hero-gallery-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.35) 70%,
+    rgba(0,0,0,0.55) 100%
+  );
+}
+
+/* Collage row under hero */
+.hero-gallery-row{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 14px 18px 0;
+  background: #000; /* keeps the “strip” feeling intentional */
+}
+
+.hero-gallery-row img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center; /* keeps faces centered */
+  display: block;
+  border-radius: 14px;
+}
+
+/* Make the collage feel more premium */
+@media (hover:hover){
+  .hero-gallery-row img{
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .hero-gallery-row img:hover{
+    transform: translateY(-4px);
+    opacity: 0.95;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px){
+  .hero-gallery-row{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-gallery-row img{
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  .hero-gallery{
+    margin-top: 2rem;
+  }
+  .hero-gallery-main{
+    height: 320px;
+  }
+  .hero-gallery-row{
+    grid-template-columns: 1fr;
+    padding: 12px 14px 0;
+  }
+  .hero-gallery-row img{
+    height: 220px;
+    border-radius: 12px;
+  }
+}
+
+/* grounding base for hero gallery */
+.hero-gallery-base{
+  width: 100%;
+  height: 10px;
+  background: #000;
+}
+
+/* =========================================================
+   RECRUITMENT PAGE: CLEAN + WIDER + SMALLER TYPE
+   Paste this whole block at the VERY BOTTOM of your CSS.
+   (It replaces the messy duplicates + fixes squished text)
+   ========================================================= */
+
+/* Paste this at the VERY BOTTOM of style.css (this adds modal + compact card UI only) */
+
+.position-cta{
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #8d1e1e;
+  font-weight: 600;
+}
+
+.position-card{
+  cursor: pointer;
+}
+
+.position-card:focus{
+  outline: 3px solid rgba(214,40,40,0.35);
+  outline-offset: 3px;
+}
+
+/* Modal */
+.modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  z-index: 9999;
+}
+
+.modal-overlay.active{
+  display: flex;
+}
+
+.modal{
+  width: min(920px, 95vw);
+  max-height: 85vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.modal h2{
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #8d1e1e;
+  text-transform: none;
+}
+
+.modal-body p{
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 0.9rem;
+}
+
+.modal-body ul{
+  padding-left: 1.2rem;
+  margin: 0.4rem 0 1rem;
+}
+
+.modal-body li{
+  margin-bottom: 0.35rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.modal-close{
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  color: #222;
+}
+
+.modal-actions{
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-apply{
+  display: inline-block;
+  background: #8d1e1e;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.modal-apply:hover{
+  background: #aa2e2e;
+}
+
+/* === Recruitment cards: equal margins + tighter spacing === */
+.recruitment-section{
+  max-width: 1200px;            /* keeps it aligned with your headings */
+  padding: 0 2rem 2rem;         /* equal left/right spacing like about-hero */
+  margin: 0 auto;
+}
+
+.recruitment-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+  gap: 1.25rem;                 /* equal spacing between all boxes */
+}
+
+/* tighten the card padding so boxes feel less chunky */
+.recruitment-grid .project-text{
+  padding: 1.5rem;              /* was 2rem */
+  margin: 0;                    /* ensures all boxes line up evenly */
+}
+
+/* optional: make the snippet spacing consistent */
+.recruitment-grid .position-snippet{
+  margin-top: 0.6rem;
+}
+
+/* Fix: prevent fixed-position modal from being affected by html perspective/3D */
+html.modal-open{
+  perspective: none !important;
+  transform-style: flat !important;
+}
